@@ -1,0 +1,103 @@
+/* 1. Element Selector (Slide 9) 
+   Mengatur gaya dasar untuk semua tag body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Menghapus margin bawaan browser */
+    background-color: #f4f4f4;
+}
+
+/* 2. Class Selector (Slide 11)
+   Digunakan untuk elemen Header */
+.main-header {
+    background-color: #b30000; /* Merah Richeese */
+    color: white;
+    padding: 20px; /* Jarak isi ke tepi (Box Model) */
+    text-align: center;
+    border-bottom: 5px solid #ffcc00; /* Garis bawah kuning */
+}
+
+/* Styling Link Menu */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Jarak antar menu (Box Model) */
+    font-weight: bold;
+}
+
+/* Pseudo-class :hover (Efek saat mouse menunjuk) */
+.menu-item:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* 3. ID Selector (Slide 10) 
+   Digunakan untuk Hero Section yang unik */
+#hero {
+    background-color: #414040;
+    color: rgb(0, 0, 0);
+    padding: 50px 20px; /* Padding Atas-Bawah 50px, Kiri-Kanan 20px */
+    text-align: center;
+}
+
+#about {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact {
+    background-color: #ffe6e6; /* Merah muda lembut */
+    padding: 40px 20px;
+}
+
+/* PENERAPAN BOX MODEL (Slide 13-14) 
+   Mengatur kotak konten agar rapi di tengah */
+.content-box {
+    width: 60%;         /* Content Width */
+    margin: auto;       /* Margin auto membuat posisi tengah */
+    padding: 20px;      /* Jarak teks ke garis tepi */
+    border: 1px dashed #ccc; /* Garis tepi putus-putus */
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Styling Gambar Bulat (Border Radius) */
+.profile-pic {
+    border-radius: 50%; /* Membuat lingkaran */
+    border: 4px solid #b30000; /* Border tebal merah */
+    margin-bottom: 15px;
+}
+
+/* Styling Input Form */
+.input-field {
+    width: 100%;
+    padding: 10px;      /* Padding dalam input */
+    margin-bottom: 10px;/* Margin bawah agar tidak nempel */
+    border: 1px solid #999;
+    border-radius: 5px; /* Sudut tumpul */
+    box-sizing: border-box; /* Agar padding tidak melebarkan kotak */
+}
+
+/* Styling Tombol (Class Selector) */
+.btn {
+    background-color: #b30000;
+    color: white;
+    padding: 10px 20px; /* Padding tombol */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #ffcc00; /* Berubah kuning saat hover */
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
