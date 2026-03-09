@@ -1,0 +1,26 @@
+/* Element selectors */
+body { font-family: Arial; line-height: 1.6; }
+h1, h2 { color: #333; }
+
+/* ID selectors */
+#main-header { background: #333; color: white; padding: 20px; }
+#main-footer { background: #666; color: white; padding: 10px; text-align: center; }
+
+/* Class selectors */
+.container { max-width: 1200px; margin: 0 auto; }
+.post { padding: 20px; margin: 15px 0; border: 1px solid #ddd; border-radius: 8px; }
+.intro { font-size: 18px; color: #555; }
+.featured { border-left: 5px solid #4CAF50; background: #f9fff9; }
+
+/* Descendant selectors */
+#main-header nav a { color: white; text-decoration: none; margin: 0 15px; }
+
+/* Pseudo-classes */
+.nav-link:hover { text-decoration: underline; }
+.nav-link.active { border-bottom: 2px solid white; }
+
+/* Pseudo-elements */
+.featured h2::before { content: "* "; color: #4CAF50; }
+
+/* Attribute selectors */
+a[href^="https"]::after { content: " (ext)"; font-size: 0.8em; }
