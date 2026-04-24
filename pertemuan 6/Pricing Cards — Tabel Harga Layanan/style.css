@@ -1,0 +1,15 @@
+.pricing {
+    display: flex; gap: 24px;
+    align-items: stretch; padding: 48px; }
+.plan {
+    flex: 1;
+    display: flex; flex-direction: column;
+    padding: 32px; border-radius: 16px;
+    background: #F8F9FA; gap: 16px; }
+.plan.featured {
+    background: #1A1A2E; color: white;
+    transform: scale(1.05); }
+.amount {
+    font-size: 2rem; font-weight: 800; }
+/* tombol selalu di bawah kartu */
+.plan button { margin-top: auto; }

@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 64px;
+    background: #1A1A2E; }
+.logo {
+    font-size: 1.25rem; font-weight: 700;
+    color: #FFD660; letter-spacing: -0.5px; }
+.nav-links {
+    display: flex; gap: 32px;
+    list-style: none; }
+.nav-links a {
+    color: #CCC; text-decoration: none; }
+.cta {
+    background: #3A86FF; color: white;
+    padding: 8px 20px; border-radius: 6px; }
