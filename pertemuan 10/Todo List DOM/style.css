@@ -1,0 +1,11 @@
+li.done span { text-decoration: line-through;
+  opacity: 0.4; }
+.btn-done { background: #2ecc71; }
+.btn-del { background: #ff556a; }
+li { display: flex; gap: 8px;
+    align-items: center;
+    padding: 8px 12px;
+    background: #28283c;
+    border-radius: 8px;
+    margin-bottom: 6px; }
+      

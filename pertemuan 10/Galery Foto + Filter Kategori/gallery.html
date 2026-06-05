@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Filter</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<h1>Galeri Foto + Filter Kategori</h1>
+
+<div class="filter-btns">
+  <button class="filter active" data-cat="all">Semua</button>
+  <button class="filter" data-cat="alam">Alam</button>
+  <button class="filter" data-cat="kota">Kota</button>
+  <button class="filter" data-cat="kuliner">Kuliner</button>
+  <button class="filter" data-cat="pantai">Pantai</button>
+  <button class="filter" data-cat="hewan">Hewan</button>
+</div>
+
+<div class="gallery" id="gallery">
+
+  <div class="card" data-cat="alam">
+    <img src="https://picsum.photos/300/200?random=1">
+    <p>Gunung Bromo</p>
+  </div>
+
+  <div class="card" data-cat="kota">
+    <img src="https://picsum.photos/300/200?random=2">
+    <p>Jakarta Malam</p>
+  </div>
+
+  <div class="card" data-cat="kuliner">
+    <img src="https://picsum.photos/300/200?random=3">
+    <p>Nasi Goreng</p>
+  </div>
+
+  <div class="card" data-cat="pantai">
+    <img src="https://picsum.photos/300/200?random=4">
+    <p>Pantai Bali</p>
+  </div>
+
+  <div class="card" data-cat="hewan">
+    <img src="https://picsum.photos/300/200?random=5">
+    <p>Kucing Lucu</p>
+  </div>
+
+  <div class="card" data-cat="alam">
+    <img src="https://picsum.photos/300/200?random=6">
+    <p>Hutan Hijau</p>
+  </div>
+
+</div>
+
+<script src="gallery.js"></script>
+
+</body>
+</html>
