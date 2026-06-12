@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek 3 - Dashboard Interaktif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Admin Panel</h1>
+      <p>Kelola data dan pengaturan aplikasi Anda di sini.</p>
+    </header>
+
+    <nav class='tab-nav'>
+      <button class='tombol-tab aktif' data-tab='ikhtisar'>Ikhtisar</button>
+      <button class='tombol-tab' data-tab='statistik'>Statistik</button>
+      <button class='tombol-tab' data-tab='pengaturan'>Pengaturan</button>
+    </nav>
+
+    <section id='ikhtisar' class='panel aktif'>
+      <div class='grid-statistik'>
+        <div class='kartu-stat' data-target='1200'>
+          <h3 class='penghitung'>0</h3>
+          <p>Total Pengguna</p>
+        </div>
+      </div>
+    </section>
+
+    <section id='statistik' class='panel'>
+      <div class="placeholder-content">
+        <div class="chart-icon">📊</div>
+        <h3>Grafik Statistik</h3>
+        <p>Konten halaman grafik statistik di sini...</p>
+      </div>
+    </section>
+
+    <section id='pengaturan' class='panel'>
+      <div class='item-akordion'>
+        <button class='judul-akordion'>Tema Tampilan</button>
+        <div class='konten-akordion'>
+          <div class="accordion-inner">
+            <p>Pilih mode tampilan yang nyaman untuk mata Anda:</p>
+            <button id='theme-btn'>Alihkan Mode Gelap</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

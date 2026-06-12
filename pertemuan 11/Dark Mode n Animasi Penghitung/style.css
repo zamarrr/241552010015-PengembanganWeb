@@ -1,0 +1,131 @@
+/* Konfigurasi Global & Variabel Tema */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --bg-halaman: #f1f5f9;
+  --bg-kartu: #ffffff;
+  --warna-teks: #0f172a;
+  --warna-muted: #64748b;
+  --warna-aksen: #4f46e5;
+  --bayangan: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* Skema Warna Mode Gelap */
+.gelap {
+  --bg-halaman: #0f172a;
+  --bg-kartu: #1e293b;
+  --warna-teks: #f8fafc;
+  --warna-muted: #94a3b8;
+  --warna-aksen: #818cf8;
+  --bayangan: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--bg-halaman);
+  color: var(--warna-teks);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.header-aksi {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+/* Desain Tombol Premium */
+#theme-btn {
+  background-color: var(--bg-kartu);
+  color: var(--warna-teks);
+  border: 1px solid var(--warna-muted);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+#theme-btn:hover {
+  background-color: var(--warna-aksen);
+  color: #ffffff;
+  border-color: var(--warna-aksen);
+}
+
+/* Desain Kartu Utama */
+.kartu {
+  background-color: var(--bg-kartu);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--bayangan);
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.kartu:hover {
+  transform: translateY(-4px);
+}
+
+/* Elemen Avatar Grafis */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--warna-aksen), #c7d2fe);
+  margin: 0 auto 24px;
+  display: grid;
+  place-items: center;
+  animation: muncul 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icon-user {
+  width: 24px;
+  height: 24px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+}
+.icon-user::after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 16px;
+  border: 3px solid white;
+  border-radius: 20px 20px 0 0;
+  top: 26px;
+  left: -9px;
+}
+
+@keyframes muncul {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Angka Penghitung */
+.penghitung {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--warna-aksen);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.kartu p {
+  color: var(--warna-muted);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}

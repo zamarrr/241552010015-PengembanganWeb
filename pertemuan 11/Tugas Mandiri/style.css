@@ -1,0 +1,209 @@
+/* Variabel Warna CSS (Spesifikasi 1) */
+:root {
+  --bg: #f9f9fb;
+  --panel-bg: #ffffff;
+  --teks: #1e1e2e;
+  --aksen: #4f46e5;
+  --border: #e2e8f0;
+}
+
+/* Skema Mode Gelap (Spesifikasi 1) */
+.gelap {
+  --bg: #0f172a;
+  --panel-bg: #1e293b;
+  --teks: #f8fafc;
+  --aksen: #818cf8;
+  --border: #334155;
+}
+
+/* Pengaturan Dasar */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--teks);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.4s, color 0.4s; /* Transisi halus */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 span{
+  color:#ee7817;
+}
+
+
+#theme-btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: var(--aksen);
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Gaya Tab Navigation */
+.tab-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.tombol-tab {
+  background: none;
+  border: none;
+  color: var(--teks);
+  padding: 8px 16px;
+  cursor: pointer;
+  opacity: 0.6;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.tombol-tab.aktif {
+  opacity: 1;
+  color: var(--aksen);
+  border-bottom: 3px solid var(--aksen);
+}
+
+.panel {
+  display: none;
+  background: var(--panel-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.panel.aktif {
+  display: block;
+}
+
+/* Gaya Grid Statistik */
+.grid-statistik {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.kartu-stat {
+  background: var(--bg);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  border: 1px solid var(--border);
+}
+
+/* Gaya Form & Validasi (Spesifikasi 3) */
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-bg);
+  color: var(--teks);
+  transition: border-color 0.2s;
+}
+
+input.valid { border-color: #27c467; }
+input.invalid { border-color: #e54b5a; }
+
+.pesan-error {
+  color: #e54b5a;
+  font-size: 12px;
+  display: none;
+  margin-top: 4px;
+}
+
+input.invalid ~ .pesan-error {
+  display: block;
+}
+
+/* Password Strength Bar */
+.bilah {
+  height: 5px;
+  background: #333;
+  border-radius: 3px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.isian {
+  height: 100%;
+  width: 0%;
+  background: #e54b5a;
+  transition: width 0.3s, background 0.3s;
+}
+
+button[type="submit"] {
+  background: var(--aksen);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#sukses {
+  margin-top: 15px;
+  padding: 10px;
+  background: #27c467;
+  color: white;
+  border-radius: 6px;
+}
+
+.tersembunyi { display: none; }
+
+/* Gaya Accordion (Spesifikasi 2) */
+.item-akordion {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.judul-akordion {
+  width: 100%;
+  text-align: left;
+  background: var(--panel-bg);
+  color: var(--teks);
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.konten-akordion {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--bg);
+  transition: max-height 0.35s ease;
+}
+
+.konten-akordion p {
+  padding: 15px;
+  margin: 0;
+}
+
+.item-akordion.terbuka .konten-akordion {
+  max-height: 200px;
+}

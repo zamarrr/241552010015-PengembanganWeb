@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduHub - Dasbor Belajar Interaktif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Tombol Tema -->
+  <header>
+    <h1>
+      Edu<span>Hub</span>
+    </h1>
+    <button id="theme-btn">Alihkan Mode Gelap</button>
+  </header>
+
+  <!-- Navigasi Tab (Spesifikasi 2) -->
+  <nav class="tab-nav">
+    <button class="tombol-tab aktif" data-tab="ikhtisar">Ikhtisar</button>
+    <button class="tombol-tab" data-tab="pendaftaran">Pendaftaran Kelas</button>
+    <button class="tombol-tab" data-tab="faq">Bantuan (FAQ)</button>
+  </nav>
+
+  <!-- KONTEN UTAMA -->
+  <main>
+    
+    <!-- Panel 1: Ikhtisar (Kartu Statistik dengan Animasi Count-Up) -->
+    <section id="ikhtisar" class="panel aktif">
+      <h2>Selamat Datang di EduHub</h2>
+      <div class="grid-statistik">
+        <div class="kartu-stat" data-target="1500">
+          <h3 class="penghitung">0</h3>
+          <p>Siswa Aktif</p>
+        </div>
+        <div class="kartu-stat" data-target="45">
+          <h3 class="penghitung">0</h3>
+          <p>Kursus Tersedia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel 2: Pendaftaran (Form Validasi Real-time - Spesifikasi 3) -->
+    <section id="pendaftaran" class="panel">
+      <h2>Formulir Akun Baru</h2>
+      <form id="formulir">
+        <div class="field">
+          <label for="nama">Nama Lengkap</label>
+          <input id="nama" type="text" placeholder="Minimal 3 karakter">
+          <span class="pesan-error"></span>
+        </div>
+        
+        <div class="field">
+          <label for="email">Alamat Email</label>
+          <input id="email" type="email" placeholder="contoh@email.com">
+          <span class="pesan-error"></span>
+        </div>
+        
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Minimal 8 karakter">
+          <div class="bilah"><div class="isian"></div></div>
+          <span class="pesan-error"></span>
+        </div>
+        
+        <button type="submit">Daftar Sekarang</button>
+        <div id="sukses" class="tersembunyi">✓ Pendaftaran Berhasil! Membuka Dasbor...</div>
+      </form>
+    </section>
+
+    <!-- Panel 3: FAQ (Komponen Accordion - Spesifikasi 2) -->
+    <section id="faq" class="panel">
+      <h2>Pertanyaan Umum</h2>
+      
+      <div class="item-akordion">
+        <button class="judul-akordion">Apakah kursus di EduHub gratis?</button>
+        <div class="konten-akordion">
+          <p>Kami menyediakan materi dasar secara gratis, dan materi premium berbayar dengan sertifikat resmi.</p>
+        </div>
+      </div>
+
+      <div class="item-akordion">
+        <button class="judul-akordion">Bagaimana cara mencairkan sertifikat?</button>
+        <div class="konten-akordion">
+          <p>Sertifikat akan otomatis terbit di tab 'Ikhtisar' setelah Anda menyelesaikan seluruh modul dan kuis evaluasi.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
